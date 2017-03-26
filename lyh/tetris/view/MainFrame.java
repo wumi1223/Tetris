@@ -3,6 +3,7 @@ package lyh.tetris.view;
 
 import java.awt.Color;
 
+import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.LineBorder;
@@ -21,6 +22,7 @@ public class MainFrame extends JFrame {
 		super("Tetris");
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		this.setSize(350, 440);
+		this.setIconImage(new ImageIcon("Icon.png").getImage());
 		this.setLocationRelativeTo(null);
 		this.setResizable(false);
 		this.setLayout(null);
