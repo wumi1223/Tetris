@@ -1,8 +1,11 @@
 package lyh.tetris.view;
 
 import java.awt.Color;
+import java.awt.Graphics;
 
 import javax.swing.JPanel;
+
+import lyh.tetris.model.Shape;
 
 public class GamePanel extends JPanel{
 
@@ -13,7 +16,13 @@ public class GamePanel extends JPanel{
 		this.setBackground(Color.WHITE);
 	}
 	
-	
+	protected void paintComponent(Graphics g) {
+		super.paintComponent(g);
+		
+		Shape shape = ShapePainter.getShape();
+		ShapePainter.paint(g, shape, 20, 100, 0);
+		
+	}
 	
 	
 	
